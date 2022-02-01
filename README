@@ -1,0 +1,11 @@
+oneoff lets you write one-off code and run it instantly.
+
+Install with 'pip install .' or 'python setup.py install'
+
+Run with 'oneoff RUNNER'. It defaults to using the nano editor, which can be changed with the --editor EDITOR option.
+
+Your editor should be able to be run with "EDITOR FILE_PATH", and your runner should be able to be run with "RUNNER FILE_PATH".
+
+Your runner is the command used to run your code, i.e. "python3" and your editor is the command used to run the editor, i.e. "nano", "vim"
+
+This project is licensed under the MIT License. Contributions are welcome!
