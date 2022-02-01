@@ -20,6 +20,3 @@ def run(runner, editor):
         return
     
     subprocess.run([f"{runner}", f"{file_name}"])
-
-if __name__ == "__main__":
-    run()
