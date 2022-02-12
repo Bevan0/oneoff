@@ -10,4 +10,6 @@ Your editor should be able to be run with "EDITOR FILE_PATH", and your runner sh
 
 Your runner is the command used to run your code, i.e. "python3" and your editor is the command used to run the editor, i.e. "nano", "vim"
 
+(NOTE: This is only compatible with Linux and maybe macOS, which I haven't tested)
+
 This project is licensed under the MIT License. Contributions are welcome!
