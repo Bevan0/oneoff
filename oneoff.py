@@ -18,6 +18,22 @@ def run(runner, editor):
         file_name = prevfile.read().split('\n')[1]
         realrunner = prevfile.read().split('\n')[0]
         prevfile.close()
+    elif runner == "EXPORT":
+        prevfile = open(f"{os.environ['HOME']}/.config/oneoff-previousfile", "r")
+        file_name = prevfile.read().split('\n')[1]
+        prevfile.close()
+
+        save_loc = click.prompt("Where do you want to save this? ", type=click.Path())
+
+        if save_loc[0] == "~":
+            save_loc = os.environ["HOME"] + save_loc[1:]
+
+        old_file = open(file_name, "r")
+        new_file = open(save_loc, "w")
+        new_file.write(old_file.read())
+
+        click.echo(f"Saved to {save_loc}")
+        return
     else:
         file_name = f"/tmp/oneoff-{''.join(random.choice(string.ascii_letters + string.digits) for i in range(8))}"
 
